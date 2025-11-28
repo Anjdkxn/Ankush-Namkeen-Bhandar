@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankush Namkeen Bhandar Navbar</title>
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style type="text/css">
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 15px 8%;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* LOGO */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f5d26c;
+    letter-spacing: 1px;
+}
+.logo span {
+    color: #ffd700;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+/* Order Button */
+.order-btn {
+    background: linear-gradient(45deg, #b6862c, #ffd700);
+    padding: 10px 20px;
+    color: #000;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    box-shadow: 0px 0px 12px #ffd700;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Mobile View */
+@media (max-width: 900px) {
+    .nav-links,
+    .order-btn {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 8%;
+        background: #1a1a1a;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+
+    .nav-links.active li {
+        margin-bottom: 15px;
+    }
+
+    .nav-links.active li a {
+        font-size: 18px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    width: 100%;
+    background-image: url(bhandar1.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    text-align: center;
+    position: relative;
+}
+
+/* Content */
+.hero-content h1 {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: capitalize;
+    animation: fadeDown 1.2s ease-out forwards;
+}
+
+.hero-content h1 span {
+    color: #ffd700;
+}
+
+.hero-content p {
+    color: #e8e8e8;
+    margin-top: 15px;
+    font-size: 20px;
+    animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-top: 30px;
+    animation: fadeUp 1.3s ease-out forwards;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 28px;
+    margin: 0 10px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: linear-gradient(45deg, #b6862c, #ffd700);
+    color: #000;
+}
+
+.btn.secondary {
+    border: 2px solid #ffd700;
+    color: white;
+    background: transparent;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 12px rgba(255, 215, 0, 0.8);
+}
+
+/* Animations */
+@keyframes fadeDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 10px 22px;
+        margin-top: 12px;
+        display: block;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* SECTION */
+.namkeen-section {
+    padding: 80px 8%;
+    background: #0f0f0f;
+    text-align: center;
+
+}
+
+.namkeen-title {
+    color: #ffd700;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* GRID */
+.namkeen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+/* CARD */
+.namkeen-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.4s ease;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+    overflow: hidden;
+}
+
+.namkeen-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* IMAGE */
+.namkeen-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.namkeen-card:hover img {
+    transform: scale(1.07);
+}
+
+/* TEXT */
+.namkeen-card h3 {
+    color: #ffd700;
+    font-size: 22px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.namkeen-card p {
+    color: #d8d8d8;
+    margin: 8px 0 15px;
+    font-size: 15px;
+}
+
+/* BUTTON */
+.gold-btn {
+    background: linear-gradient(45deg, #b6862c, #ffd700);
+    padding: 10px 22px;
+    border-radius: 6px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.gold-btn:hover {
+    box-shadow: 0 0 12px #ffd700;
+}
+
+
+/* VARIETY SECTION */
+.variety-section {
+    padding: 80px 8%;
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.variety-title {
+    font-size: 38px;
+    color: #ffd700;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.variety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+}
+
+/* CARD */
+.variety-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 15px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.variety-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* IMAGE */
+.variety-card img {
+    width: 100%;
+    height: 190px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.variety-card:hover img {
+    transform: scale(1.07);
+}
+
+/* TEXT */
+.variety-card h3 {
+    margin-top: 12px;
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* PROJECTS SECTION */
+.projects-section {
+    padding: 80px 8%;
+    background: #0e0e0e;
+    text-align: center;
+}
+
+.projects-title {
+    font-size: 38px;
+    color: #ffd700;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+/* CARD */
+.project-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.45);
+}
+
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+/* TEXT */
+.project-card h3 {
+    color: #ffd700;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.project-card p {
+    color: #d6d6d6;
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+
+/* Footer Styling */
+.footer {
+  background: linear-gradient(135deg, #b8860b, #d4a017);
+  padding: 60px 20px 10px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-text {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.footer-links li {
+  list-style: none;
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-social a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Ankush <span>Namkeen</span> Bhandar</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="items.html">Items</a></li>
+            <li><a href="variety.html">Variety</a></li>
+            <li><a href="projects.html">Our Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="order.html" class="order-btn">Order Now</a>
+
+        <div class="menu-icon" id="menuBtn">
+            ☰
+        </div>
+    </nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to <span>Ankush Namkeen Bhandar</span></h1>
+        <p>Taste the Tradition • Feel the Crunch • Premium Quality Namkeen</p>
+
+        <div class="hero-buttons">
+            <a href="items.html" class="btn primary">Explore Items</a>
+            <a href="order.html" class="btn secondary">Order Now</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="namkeen-section" id="namkeen-items">
+    <h2 class="namkeen-title">Our Namkeen ITEMS Collection</h2>
+
+    <div class="namkeen-grid">
+
+        <div class="namkeen-card">
+            <img src="Aloo.jpg" alt="">
+            <h3>Aloo Bhujia</h3>
+            <p>Crispy, spicy & traditional taste.</p>
+            <a href="order.html" class="gold-btn">Order Now</a>
+        </div>
+
+        <div class="namkeen-card">
+            <img src="khatta.webp" alt="">
+            <h3>Khatta Meetha</h3>
+            <p>Sweet & tangy premium mixture.</p>
+            <a href="order.html" class="gold-btn">Order Now</a>
+        </div>
+
+        <div class="namkeen-card">
+            <img src="moong.webp" alt="">
+            <h3>Moong Dal</h3>
+            <p>Light salted crispy lentil snack.</p>
+            <a href="order.html" class="gold-btn">Order Now</a>
+        </div>
+
+        <div class="namkeen-card">
+            <img src="nav.webp" alt="">
+            <h3>Navratan Mix</h3>
+            <p>9-flavour premium crunchy mix.</p>
+            <a href=order.html class="gold-btn">Order Now</a>
+        </div>
+
+        <div class="namkeen-card">
+            <img src="sev.jpg" alt="">
+            <h3>Masala Sev</h3>
+            <p>Spicy & flavourful hot sev.</p>
+            <a href=order.html class="gold-btn">Order Now</a>
+        </div>
+
+        <div class="namkeen-card">
+            <img src="corn.webp" alt="">
+            <h3>Cornflakes Mixture</h3>
+            <p>Healthy & crispy golden mix.</p>
+            <a href=order.html class="gold-btn">Order Now</a>
+        </div>
+
+        <div class="namkeen-card">
+            <img src="pea.jpg" alt="">
+            <h3>Salted Peanuts</h3>
+            <p>Perfectly roasted crunchy peanuts.</p>
+            <a href=order.html class="gold-btn">Order Now</a>
+        </div>
+
+        <div class="namkeen-card">
+            <img src="mix.jpg" alt="">
+            <h3>Masala Mixture</h3>
+            <p>Hot & spicy special mixture.</p>
+            <a href=order.html class="gold-btn">Order Now</a>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="variety-section" id="variety">
+    <h2 class="variety-title">Our Namkeen Variety</h2>
+
+    <div class="variety-grid">
+
+        <div class="variety-card">
+            <img src="bhujia.webp" alt="">
+            <h3>Special Aloo Bhujia</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="khatta.webp" alt="">
+            <h3>Khatta Meetha Mix</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="moong.webp" alt="">
+            <h3>Moong Dal Special</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="nav.webp" alt="">
+            <h3>Premium Navratan Mix</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="sev.jpg" alt="">
+            <h3>Masala Sev</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="corn.webp" alt="">
+            <h3>Cornflakes Mixture</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="pea.jpg" alt="">
+            <h3>Roasted Peanuts</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="mix.jpg" alt="">
+            <h3>Masala Mixture</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="chana.jpg" alt="">
+            <h3>Chana Jor Garam</h3>
+        </div>
+
+        <div class="variety-card">
+            <img src="bik.jpg" alt="">
+            <h3>Special Bikaneri Mixture</h3>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="projects-section" id="our-projects">
+    <h2 class="projects-title">Our Namkeen Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="bhuj.webp" alt="">
+            <h3>Premium Aloo Bhujia Batch</h3>
+            <p>Handcrafted batch prepared using top-quality potatoes & spices.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="mitha.jpg" alt="">
+            <h3>Khatta Meetha Special Mix</h3>
+            <p>Perfect blend of sweet & tangy flavors for festive packaging.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="dal.jpg" alt="">
+            <h3>Moong Dal Crunch Series</h3>
+            <p>Fresh crispy dal produced in small artisan batches.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="navratan.webp" alt="">
+            <h3>Navratan Mix Deluxe</h3>
+            <p>9-ingredient rich mixture for premium customers.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="seva.webp" alt="">
+            <h3>Masala Sev Production</h3>
+            <p>Hot & spicy sev made with authentic Indian spices.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="flacks.jpg" alt="">
+            <h3>Cornflakes Mix Batch</h3>
+            <p>Crispy golden flakes coated with masala flavors.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About Section -->
+    <div class="footer-box">
+      <h2 class="footer-title">Ankush Namkeen Bhandar</h2>
+      <p class="footer-text">
+        Premium Namkeen crafted with authentic Indian flavours.  
+        Taste the tradition. Enjoy the crunch!
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Products</a></li>
+        <li><a href="#">Variety</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer-box">
+      <h3 class="footer-heading">Contact Us</h3>
+      <p class="footer-text">📍 Front of Bidhanu Bajar 209214, Kanpur Nagar</p>
+      <p class="footer-text">📞 +91 9335435541</p>
+      <p class="footer-text">📧 info@ankushnamkeen.com</p>
+    </div>
+
+    <!-- Social Section -->
+    <div class="footer-box">
+      <h3 class="footer-heading">Follow Us</h3>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@RaviKumar-kr2td"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  
+</footer>
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+    document.querySelector(".hero-content").style.opacity = 1;
+});
+
+const itemCards = document.querySelectorAll(".namkeen-card");
+
+window.addEventListener("scroll", () => {
+    itemCards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < window.innerHeight - 80) {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+            card.style.transition = "0.6s ease";
+        }
+    });
+});
+
+
+const varietyCards = document.querySelectorAll(".variety-card");
+
+window.addEventListener("scroll", () => {
+    varietyCards.forEach(card => {
+        const position = card.getBoundingClientRect().top;
+        if (position < window.innerHeight - 90) {
+            card.style.opacity = 1;
+            card.style.transform = "translateY(0)";
+            card.style.transition = "0.6s ease";
+        }
+    });
+});
+
+
+const projectCards = document.querySelectorAll(".project-card");
+
+projectCards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(30px)";
+});
+
+window.addEventListener("scroll", () => {
+    projectCards.forEach(card => {
+        const pos = card.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) {
+            card.style.transition = "0.7s ease";
+            card.style.opacity = 1;
+            card.style.transform = "translateY(0)";
+        }
+    });
+});
+
+
+// Fade-in effect for footer
+const footer = document.querySelector(".footer");
+
+window.addEventListener("scroll", () => {
+  const triggerPoint = window.innerHeight * 0.8;
+
+  if (footer.getBoundingClientRect().top < triggerPoint) {
+    footer.style.opacity = "1";
+    footer.style.transform = "translateY(0)";
+  }
+});
+
+</script>
+</body>
+</html>
